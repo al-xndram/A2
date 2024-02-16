@@ -1,0 +1,172 @@
+@font-face {
+    font-family: bungee;
+    src: url(fonts/BungeeHairline-Regular.ttf);
+}
+@font-face {
+    font-family: newEdge;
+    src: url(fonts/NewEdge666-LightRounded.otf);
+}
+
+/* div {
+    display:block;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+    color: azure;
+
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+.header {
+    grid-row: 1fr;
+   
+    font-family: "bungee";
+
+    border: 1px solid white;
+}
+
+#tinyheader {
+    line-height: 20px;
+}
+
+.archivedSounds {
+    grid-row: 9fr;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    
+    font-family: "newEdge";
+    font-size: 48px;
+
+    border: 1px solid white;
+ }
+
+.sounds {
+    position: absolute;
+    
+    width: 100px;
+    height: 50px;
+    margin: 50px;
+    line-height: 1em;
+
+    transition: transform .5s; 
+}
+
+.sounds:hover {
+    transform: scale(1.25);
+} */
+
+
+/* ^^ ABOVE = CSS from V1...  */
+/* ^^ ABOVE = CSS from V1...  */
+/* ^^ ABOVE = CSS from V1...  */
+
+
+/* 
+ body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+} */
+
+body {
+    background-color: black;
+}
+
+.header {
+    color: paleturquoise; opacity: 0.5; /* Change to desired text color */
+    height: 5%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Adjust as needed */
+    background-color:black;
+    text-align: center;
+    align-items: center;
+}
+
+#topheader {    
+    font-family: "newEdge";
+    font-size: 10pt;
+}
+
+.archivedSounds {
+    width: 100%;
+    height: 90%; /* Adjust if needed */
+    margin-top: 5%; /* Ensure body content does not overlap header */
+    box-sizing: border-box;
+    padding: 20px; /* Adjust padding as per your design */
+
+    grid-row: 9fr;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sound {
+    /* position: absolute; */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    
+    /* width: 100px;
+    height: 50px;
+    margin: 50px;
+    line-height: 1em; */
+
+    color: plum;
+    transition: transform .5s; 
+    font-family:  "newEdge";
+    font-size: 49pt;
+
+    cursor: pointer;
+
+    margin-inline: 1;
+}
+
+.sound:hover {
+    transform: scale(1.25);
+}
+
+
+/* /// */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.modal-content {
+    background-color: aliceblue;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+    text-align: center;
+    font-family: "newEdge";
+    color: black;
+}
+
+/* Close button style */
+.close {
+    color: lightblue;
+    float: right;
+    font-size: 12;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
