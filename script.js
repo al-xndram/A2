@@ -35,9 +35,10 @@
 
 
 // > sound functions... [v2]
-
+let modal_open = false
 // Function to play individual sound when hovered
 function playSound(soundId) {
+  if (modal_open === true) return
   // Pause all sounds
   const sounds = document.getElementsByTagName('audio');
   for (let i = 0; i < sounds.length; i++) {
@@ -59,6 +60,9 @@ window.onload = function() {
 
 // Function to stop all sounds when mouse leaves sound element
 function stopSound() {
+  if (modal_open === true) return
+
+
   const sounds = document.getElementsByTagName('audio');
   for (let i = 0; i < sounds.length; i++) {
       sounds[i].pause();
@@ -73,27 +77,32 @@ function stopSound() {
 
 // Function to open the modal and play corresponding audio
 function openModal(text, audioId) {
-  var modal = document.getElementById("myModal");
-  var modalText = document.getElementById("modalText");
-  var audioElements = document.getElementsByTagName('audio');
+  // var modal = document.getElementById("myModal");
+  // var modalText = document.getElementById("modalText");
+  // var audioElements = document.getElementsByTagName('audio');
 
-  // Pause all other audio elements
-  for (let i = 0; i < audioElements.length; i++) {
-      audioElements[i].pause();
-  }
+  // // Pause all other audio elements
+  // for (let i = 0; i < audioElements.length; i++) {
+  //     audioElements[i].pause();
+  // }
 
-  // Play the corresponding audio
-  var audio = document.getElementById(audioId);
-  audio.currentTime = 0;
-  audio.play();
+  // // Play the corresponding audio
+  // var audio = document.getElementById(audioId);
+  // audio.currentTime = 0;
+  // audio.play();
 
-  // Set the modal text and display the modal
-  modalText.innerHTML = text;
+  // // Set the modal text and display the modal
+  // modalText.innerHTML = text;
+  let modal=document.querySelector("#"+text)
   modal.style.display = "block";
+  modal_open = true
 }
 
 // Function to close the modal
-function closeModal() {
-  var modal = document.getElementById("myModal");
+function closeModal(text) {
+  modal_open = false
+  
+  console.log("ok")
+  let modal=document.querySelector("#"+text)
   modal.style.display = "none";
 }

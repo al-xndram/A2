@@ -29,10 +29,11 @@
         <div class="sound" onmouseover="playSound('write')" onmouseout="stopSound()">2024-02-05</div>
         <audio id="write" src="audio/handwriting(400).mp3" autoplay loop></audio>
 
-
+        <div id="ttc_modal" 
+                 onclick="closeModal('ttc_modal')">hello world</div>
         <!-- <p class="sounds" onmouseover="PlaySound('ttc')" onmouseout="StopSound('ttc')">subway station</p> -->
 
-        <div class="sound" onmouseover="playSound('ttc')" onmouseout="stopSound()" onclick="openModal('subway arriving at dundas station', 'ttc')">2023-10-03</div>
+        <div class="sound" onmouseover="playSound('ttc')" onmouseout="stopSound()" onclick="openModal('ttc_modal', 'ttc')">2023-10-03</div>
         <audio id="ttc" src="audio/dundasstation.mp3" autoplay loop></audio>
 
 
@@ -60,14 +61,12 @@
         <audio id="cameron" src="audio/thecameron-oct8.mp3" autoplay loop></audio>
     </div>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
+    <!-- <div id="myModal" class="modal"> -->
+        <!-- <div class="modal-content">
             <span class="close" onclick="closeModal()">return</span>
             <p id="modalText"></p>
         </div>
-    </div>
+    </div> -->
 
 </body>
 </html>
-
-<!-- hello? -->
